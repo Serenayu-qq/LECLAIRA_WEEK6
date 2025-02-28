@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Mad Libs</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+
+  <body>
+    <div class="box">
+        <!-- Example of an Input -->
+        <label for="emotion">One morning, I woke up feeling </label>
+        <select id="night" name="night">
+            <option value="dark">SAD</option>
+            <option value="stormy">HAPPY</option>
+            <option value="gusty">ENPOWERED</option>
+            <!-- Add as many options as needed -->
+        </select>
+
+        and ready to take on the day. 
+    </div>
+
+    <div class="box">
+        <!-- Example of an Input -->
+        <label for="emotion">I grabbed my </label>
+        <select id="night" name="night">
+            <option value="dark">BAG</option>
+            <option value="stormy">LAPTOP</option>
+            <option value="gusty">COFFEE</option>
+            <!-- Add as many options as needed -->
+        </select>
+
+        and ready to take on the day. 
+    </div>
+
+    <div class="box">
+    <label for="name">I rushed out the door, only to trip over a </label>
+    <input type="text" id="inputid" class="mystyledinput" name="inputid"/>
+    cat on the sidewalk.
+    </div>
+
+    <h2>Choose the color that can reflect how you feel now</h2>
+    <div class="controller">
+        <label for="colorRange">Adjust Color:</label>
+        <input type="range" id="colorRange" min="0" max="360" value="180">
+    </div>
+    <script>
+        const colorRange = document.getElementById("colorRange");
+        colorRange.addEventListener("input", function() {
+            const hue = this.value;
+            if (hue == 0) {
+                document.body.style.backgroundColor = "black";
+            } else {
+                document.body.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+            }
+        });
+    </script>
+
+
+</body>
+</html>
